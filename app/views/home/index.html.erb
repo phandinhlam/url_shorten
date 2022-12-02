@@ -1,1 +1,23 @@
+<%= stylesheet_pack_tag 'home' %>
+
+<h2><center>Url Shorten</center></h3>
+<br>
+<div class="row">
+  <div>
+    <%= form_with url: encode_v1_url_shorten_path, html: { class: 'encode-form' } do |f| %>
+      <%= f.text_field :url %>
+      <%= f.submit "Encode", disable_with: 'Submiting...' %>
+    <% end %>
+    <p id="encode-result"></p>
+  </div>
+
+  <div>
+    <%= form_with url: decode_v1_url_shorten_path, html: { class: 'decode-form' } do |f| %>
+      <%= f.text_field :url %>
+      <%= f.submit "Decode", disable_with: 'Submiting...' %>
+    <% end %>
+    <p id="decode-result"></p>
+  </div>
+</div>
+
 <%= javascript_pack_tag 'home' %>

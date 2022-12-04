@@ -1,0 +1,31 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    entrypoint: ./entrypoints/docker-entrypoint.sh
+    tty: true
+    depends_on:
+      - db
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/usr/src/app
+      - bundle:/bundle
+    environment:
+      RAILS_ENV: development
+  db:
+    image: mongo:6.0
+    container_name: db
+    tty: true
+    ports:
+      - '27016:27017'
+    volumes:
+      - ./db-dump:/db-dump
+      - mongodbdata:/data/db
+
+volumes:
+  bundle:
+  mongodbdata:

@@ -1,0 +1,52 @@
+AllCops:
+  TargetRubyVersion: 2.6.5
+  Exclude:
+    - 'config/**/*'
+    - 'bin/*'
+    - 'spec/*'
+    - 'spec/**/*'
+    - 'spec/**/**/*'
+
+# Metrics
+# Too short methods lead to extraction of single-use methods, which can make
+# the code easier to read (by naming things), but can also clutter the class
+Metrics/MethodLength:
+  Max: 200
+# The guiding principle of classes is SRP, SRP can't be accurately measured by LoC
+Metrics/ClassLength:
+  Max: 1500
+Metrics/BlockLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/ModuleLength:
+  Max: 150
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+  EnforcedColonStyle: key
+  EnforcedHashRocketStyle: table
+Layout/LineLength:
+  Max: 120
+# Style
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Style/Documentation:
+  Enabled: false

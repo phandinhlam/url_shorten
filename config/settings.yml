@@ -1,0 +1,5 @@
+validation:
+  string:
+    length:
+      max: 255
+      min: 0

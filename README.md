@@ -73,3 +73,9 @@ When the app has more users used, the amount of documents in DB increases by hun
 About DB, each domain can store in a collection to speed up performance. To develop in this direction, the developer need only use the method `shorten_url_with` to scale up the system.
 
 I choose MongoDB because The data in the system is not relation.
+
+## deployment
+
+It is free ec2 aws, so it doesn't running often. please contact me if you have issue with it. sorry for this inconvenience.
+![image](https://user-images.githubusercontent.com/33271704/205663835-08a26ad5-2d7d-43e8-8497-871c59d0fa5d.png)
+
